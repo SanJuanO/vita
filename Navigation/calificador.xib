@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="calificador">
+            <connections>
+                <outlet property="estrella1" destination="Q3i-HF-TR6" id="niI-bp-lTE"/>
+                <outlet property="estrella2" destination="6ft-rR-6M4" id="FxI-q4-Lod"/>
+                <outlet property="estrella3" destination="jzS-l5-wFx" id="VTs-5A-EZ0"/>
+                <outlet property="estrella4" destination="Kg0-hF-vDM" id="T5E-ou-T3i"/>
+                <outlet property="estrella5" destination="kvn-42-IQ6" id="3IU-6B-vDP"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Iz4-Qq-4QP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="71" height="11"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3i-HF-TR6" userLabel="estrella1">
+                    <rect key="frame" x="0.0" y="0.0" width="11" height="11"/>
+                    <state key="normal" backgroundImage="estrella0">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ft-rR-6M4" userLabel="estrella2">
+                    <rect key="frame" x="15" y="0.0" width="11" height="11"/>
+                    <state key="normal" backgroundImage="estrella0">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jzS-l5-wFx" userLabel="estrella3">
+                    <rect key="frame" x="30" y="0.0" width="11" height="11"/>
+                    <state key="normal" backgroundImage="estrella0">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kg0-hF-vDM" userLabel="estrella4">
+                    <rect key="frame" x="45" y="0.0" width="11" height="11"/>
+                    <state key="normal" backgroundImage="estrella0">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvn-42-IQ6" userLabel="estrella5">
+                    <rect key="frame" x="60" y="0.0" width="11" height="11"/>
+                    <state key="normal" backgroundImage="estrella0">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="jzS-l5-wFx" firstAttribute="width" secondItem="Kg0-hF-vDM" secondAttribute="width" id="4uL-LP-vPY"/>
+                <constraint firstItem="jzS-l5-wFx" firstAttribute="width" secondItem="6ft-rR-6M4" secondAttribute="width" id="BA1-q5-MJb"/>
+                <constraint firstItem="6ft-rR-6M4" firstAttribute="centerY" secondItem="Q3i-HF-TR6" secondAttribute="centerY" id="COU-Ji-2fW"/>
+                <constraint firstItem="kvn-42-IQ6" firstAttribute="leading" secondItem="Kg0-hF-vDM" secondAttribute="trailing" constant="4" id="Im0-JT-mbX"/>
+                <constraint firstItem="jzS-l5-wFx" firstAttribute="height" secondItem="6ft-rR-6M4" secondAttribute="height" id="OlW-U0-xe7"/>
+                <constraint firstItem="6ft-rR-6M4" firstAttribute="height" secondItem="Q3i-HF-TR6" secondAttribute="height" id="PcL-eX-M9O"/>
+                <constraint firstItem="kvn-42-IQ6" firstAttribute="height" secondItem="Kg0-hF-vDM" secondAttribute="height" id="QB4-gl-jXb"/>
+                <constraint firstItem="jzS-l5-wFx" firstAttribute="centerY" secondItem="Kg0-hF-vDM" secondAttribute="centerY" id="QRN-Qe-DgU"/>
+                <constraint firstItem="Q3i-HF-TR6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SpO-9O-Mcm"/>
+                <constraint firstItem="Kg0-hF-vDM" firstAttribute="leading" secondItem="kvn-42-IQ6" secondAttribute="trailing" constant="4" id="T85-TA-8GY"/>
+                <constraint firstItem="jzS-l5-wFx" firstAttribute="leading" secondItem="6ft-rR-6M4" secondAttribute="trailing" constant="4" id="WhD-Wa-eQs"/>
+                <constraint firstItem="6ft-rR-6M4" firstAttribute="leading" secondItem="Q3i-HF-TR6" secondAttribute="trailing" constant="4" id="Y0z-WX-trV"/>
+                <constraint firstItem="jzS-l5-wFx" firstAttribute="height" secondItem="Kg0-hF-vDM" secondAttribute="height" id="hcq-8i-UvW"/>
+                <constraint firstItem="kvn-42-IQ6" firstAttribute="centerY" secondItem="Kg0-hF-vDM" secondAttribute="centerY" id="k1L-in-rMM"/>
+                <constraint firstItem="Q3i-HF-TR6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="kdl-ke-kOt"/>
+                <constraint firstItem="kvn-42-IQ6" firstAttribute="width" secondItem="Kg0-hF-vDM" secondAttribute="width" id="lHv-ht-dG8"/>
+                <constraint firstItem="6ft-rR-6M4" firstAttribute="width" secondItem="Q3i-HF-TR6" secondAttribute="height" multiplier="1:1" id="rzU-Ro-Dix"/>
+                <constraint firstItem="Kg0-hF-vDM" firstAttribute="leading" secondItem="jzS-l5-wFx" secondAttribute="trailing" constant="4" id="sFg-3Y-RIR"/>
+                <constraint firstAttribute="bottom" secondItem="Q3i-HF-TR6" secondAttribute="bottom" id="tZ3-uD-HcG"/>
+                <constraint firstItem="jzS-l5-wFx" firstAttribute="centerY" secondItem="6ft-rR-6M4" secondAttribute="centerY" id="wrg-nl-EcE"/>
+                <constraint firstItem="6ft-rR-6M4" firstAttribute="width" secondItem="Q3i-HF-TR6" secondAttribute="width" id="zpx-Oz-A4L"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="T85-TA-8GY"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="389.5" y="314.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="estrella0" width="11" height="11"/>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_centrovita {
+  umbrella header "Pods-centrovita-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="timeline">
+            <connections>
+                <outlet property="timelineCeldaMapa" destination="Sze-Ve-yCz" id="Q0o-SV-Xq3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="timelineCeldaMapa" rowHeight="200" id="Sze-Ve-yCz" customClass="timelineCeldaMapa">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sze-Ve-yCz" id="MUk-BN-Xtb">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="199.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YNJ-Tn-fTp">
+                        <rect key="frame" x="10" y="0.0" width="300" height="200"/>
+                    </mapView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="YNJ-Tn-fTp" secondAttribute="bottom" constant="-1" id="0Ai-vT-vM0"/>
+                    <constraint firstAttribute="trailing" secondItem="YNJ-Tn-fTp" secondAttribute="trailing" constant="10" id="W6B-Pd-NhA"/>
+                    <constraint firstItem="YNJ-Tn-fTp" firstAttribute="leading" secondItem="MUk-BN-Xtb" secondAttribute="leading" constant="10" id="ZMv-9H-kl2"/>
+                    <constraint firstItem="YNJ-Tn-fTp" firstAttribute="top" secondItem="MUk-BN-Xtb" secondAttribute="top" id="q6G-J6-i1j"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="mapa" destination="YNJ-Tn-fTp" id="zA1-3Z-GGW"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

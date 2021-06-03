@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="timeline">
+            <connections>
+                <outlet property="timelineCeldaGaleria" destination="24j-a2-u0W" id="Fu1-65-2QY"/>
+                <outlet property="timelineCeldaGaleria2" destination="Sif-Kg-VHx" id="vm4-RQ-rJy"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timelineCeldaGaleria2" id="Sif-Kg-VHx" customClass="timelineCeldaGaleria">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sif-Kg-VHx" id="nX7-vW-O8g">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B1i-XL-SGK" customClass="galeriaPrincipal">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="B1i-XL-SGK" secondAttribute="trailing" id="bif-pe-Xpk"/>
+                    <constraint firstAttribute="bottom" secondItem="B1i-XL-SGK" secondAttribute="bottom" id="gsI-bM-gGR"/>
+                    <constraint firstItem="B1i-XL-SGK" firstAttribute="leading" secondItem="nX7-vW-O8g" secondAttribute="leading" id="nr9-Is-SeM"/>
+                    <constraint firstItem="B1i-XL-SGK" firstAttribute="top" secondItem="nX7-vW-O8g" secondAttribute="top" id="tgr-XC-5EB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="galeria" destination="B1i-XL-SGK" id="sbK-w9-wQ2"/>
+            </connections>
+            <point key="canvasLocation" x="293" y="137"/>
+        </tableViewCell>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timelineCeldaGaleria" id="24j-a2-u0W" customClass="timelineCeldaGaleria">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="24j-a2-u0W" id="9A0-Ts-FCW">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="20n-4g-lFn" customClass="galeriaPrincipal">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="20n-4g-lFn" secondAttribute="trailing" id="DDi-YB-gif"/>
+                    <constraint firstItem="20n-4g-lFn" firstAttribute="leading" secondItem="9A0-Ts-FCW" secondAttribute="leading" id="oNX-Aw-OeW"/>
+                    <constraint firstAttribute="bottom" secondItem="20n-4g-lFn" secondAttribute="bottom" id="pEi-HT-Lg7"/>
+                    <constraint firstItem="20n-4g-lFn" firstAttribute="top" secondItem="9A0-Ts-FCW" secondAttribute="top" id="rJZ-jN-ilu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="galeria" destination="20n-4g-lFn" id="eWN-hS-mua"/>
+            </connections>
+            <point key="canvasLocation" x="293" y="137"/>
+        </tableViewCell>
+    </objects>
+</document>

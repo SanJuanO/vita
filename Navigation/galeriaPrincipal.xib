@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="galeriaPrincipal">
+            <connections>
+                <outlet property="contenedor" destination="6Bd-XK-7Kc" id="Jjr-5N-Ri9"/>
+                <outlet property="paginador" destination="Ebx-zr-ZRn" id="q75-Ne-xeY"/>
+                <outlet property="view" destination="iN0-l3-epB" id="M2c-ga-GPg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6Bd-XK-7Kc">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="240" id="VXN-R6-700"/>
+                        <constraint firstAttribute="width" constant="320" id="ydG-kD-yCd"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="itr-e7-1wV">
+                        <size key="itemSize" width="320" height="240"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <cells/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="VXN-R6-700"/>
+                            <exclude reference="ydG-kD-yCd"/>
+                        </mask>
+                    </variation>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ebx-zr-ZRn">
+                    <rect key="frame" x="41" y="212" width="239" height="37"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="hgO-p5-M4i"/>
+                    </constraints>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ebx-zr-ZRn" secondAttribute="bottom" constant="-9" id="8DR-wN-IYD"/>
+                <constraint firstItem="Ebx-zr-ZRn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="41" id="IrU-3v-PmM"/>
+                <constraint firstAttribute="bottom" secondItem="6Bd-XK-7Kc" secondAttribute="bottom" constant="20" id="KxM-Pb-LCF"/>
+                <constraint firstItem="6Bd-XK-7Kc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="RPU-5d-DP5"/>
+                <constraint firstItem="6Bd-XK-7Kc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="X8v-By-1wy"/>
+                <constraint firstAttribute="trailing" secondItem="Ebx-zr-ZRn" secondAttribute="trailing" constant="40" id="f1v-On-kcj"/>
+                <constraint firstAttribute="bottom" secondItem="6Bd-XK-7Kc" secondAttribute="bottom" id="now-7D-a9J"/>
+                <constraint firstAttribute="trailing" secondItem="6Bd-XK-7Kc" secondAttribute="trailing" id="rYX-yZ-RtY"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="KxM-Pb-LCF"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="409" y="443"/>
+        </view>
+    </objects>
+</document>

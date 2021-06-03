@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="timeline">
+            <connections>
+                <outlet property="timelineCeldaBotones" destination="HoP-fH-nqI" id="QDp-SM-g79"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="timelineCeldaBotones" id="HoP-fH-nqI" customClass="timelineCeldaBotones">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HoP-fH-nqI" id="A1L-vD-xp4">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vD8-pj-cXw">
+                        <rect key="frame" x="0.0" y="42" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.84712600708007812" green="0.032903812825679779" blue="0.084094814956188202" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="jhW-qA-vpU"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiL-MU-E02">
+                        <rect key="frame" x="163" y="4" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="izJ-cF-Qc5"/>
+                            <constraint firstAttribute="height" constant="35" id="uAA-HJ-UAm"/>
+                        </constraints>
+                        <state key="normal" image="botonTelefono"/>
+                        <connections>
+                            <action selector="tel2:" destination="HoP-fH-nqI" eventType="touchUpInside" id="rzo-M9-4qs"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9t8-es-UIw">
+                        <rect key="frame" x="123" y="4" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="UAj-hS-9Jt"/>
+                            <constraint firstAttribute="height" constant="35" id="emx-GC-z8E"/>
+                        </constraints>
+                        <state key="normal" image="botonTelefono"/>
+                        <connections>
+                            <action selector="tel1:" destination="HoP-fH-nqI" eventType="touchUpInside" id="aNg-Jg-F8J"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9t8-es-UIw" firstAttribute="centerX" secondItem="A1L-vD-xp4" secondAttribute="centerX" constant="-20" id="3s6-iC-eoy"/>
+                    <constraint firstItem="AiL-MU-E02" firstAttribute="top" secondItem="A1L-vD-xp4" secondAttribute="top" constant="4" id="MyJ-NF-fhK"/>
+                    <constraint firstItem="9t8-es-UIw" firstAttribute="top" secondItem="A1L-vD-xp4" secondAttribute="top" constant="4" id="PoL-0o-N3W"/>
+                    <constraint firstAttribute="bottom" secondItem="vD8-pj-cXw" secondAttribute="bottom" id="WWU-AF-3kh"/>
+                    <constraint firstAttribute="trailing" secondItem="vD8-pj-cXw" secondAttribute="trailing" id="WyR-QF-6rR"/>
+                    <constraint firstItem="vD8-pj-cXw" firstAttribute="leading" secondItem="A1L-vD-xp4" secondAttribute="leading" id="dYd-PV-Yg8"/>
+                    <constraint firstItem="AiL-MU-E02" firstAttribute="centerX" secondItem="A1L-vD-xp4" secondAttribute="centerX" constant="20" id="h7v-uO-1KW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="botonTelefono1" destination="9t8-es-UIw" id="CdS-gE-VQW"/>
+                <outlet property="botonTelefono2" destination="AiL-MU-E02" id="XEu-1d-kPm"/>
+                <outlet property="linea" destination="vD8-pj-cXw" id="cJ8-nE-dNG"/>
+            </connections>
+            <point key="canvasLocation" x="79" y="124"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="botonTelefono" width="200" height="200"/>
+    </resources>
+</document>

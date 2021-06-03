@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>Root</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>This app uses the following software under the following license agreements</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+			<key>Title</key>
+			<string>PayPal iOS SDK</string>
+			<key>File</key>
+			<string>acknowledgments</string>
+		</dict>
+        <dict>
+            <key>Type</key>
+            <string>PSGroupSpecifier</string>
+            <key>Title</key>
+            <string>The PayPal iOS SDK uses code from the following libraries:</string>
+        </dict>
+        <dict>
+            <key>Type</key>
+            <string>PSChildPaneSpecifier</string>
+            <key>Title</key>
+            <string>PayPal's card.io</string>
+            <key>File</key>
+            <string>acknowledgments2</string>
+        </dict>
+        <dict>
+            <key>Type</key>
+            <string>PSChildPaneSpecifier</string>
+            <key>Title</key>
+            <string>AgileBits' 1Password App Extension</string>
+            <key>File</key>
+            <string>acknowledgments3</string>
+        </dict>
+        <dict>
+            <key>Type</key>
+            <string>PSChildPaneSpecifier</string>
+            <key>Title</key>
+            <string>Eigen</string>
+            <key>File</key>
+            <string>acknowledgments4</string>
+        </dict>
+        <dict>
+            <key>Type</key>
+            <string>PSChildPaneSpecifier</string>
+            <key>Title</key>
+            <string>Erica Sadun's iPhone Developer's Cookbook</string>
+            <key>File</key>
+            <string>acknowledgments5</string>
+        </dict>
+        <dict>
+            <key>Type</key>
+            <string>PSChildPaneSpecifier</string>
+            <key>Title</key>
+            <string>Georg Kitz's UIDevice-with-UniqueIdentifier-for-iOS-5</string>
+            <key>File</key>
+            <string>acknowledgments6</string>
+        </dict>
+        <dict>
+            <key>Type</key>
+            <string>PSChildPaneSpecifier</string>
+            <key>Title</key>
+            <string>Base64 [en|de]coding methods by Dave Winer</string>
+            <key>File</key>
+            <string>acknowledgments7</string>
+        </dict>
+        <dict>
+            <key>Type</key>
+            <string>PSChildPaneSpecifier</string>
+            <key>Title</key>
+            <string>Willow Garage's OpenCV</string>
+            <key>File</key>
+            <string>acknowledgments8</string>
+        </dict>
+        <dict>
+            <key>Type</key>
+            <string>PSChildPaneSpecifier</string>
+            <key>Title</key>
+            <string>Josh Bleecher Snyder's TLCommon</string>
+            <key>File</key>
+            <string>acknowledgments9</string>
+        </dict>
+        <dict>
+            <key>Type</key>
+            <string>PSChildPaneSpecifier</string>
+            <key>Title</key>
+            <string>Tomáš Znamenáček's Lambda Alert</string>
+            <key>File</key>
+            <string>acknowledgments10</string>
+        </dict>
+        <dict>
+            <key>Type</key>
+            <string>PSChildPaneSpecifier</string>
+            <key>Title</key>
+            <string>Facebook's Three20</string>
+            <key>File</key>
+            <string>acknowledgments11</string>
+        </dict>
+        <dict>
+            <key>Type</key>
+            <string>PSChildPaneSpecifier</string>
+            <key>Title</key>
+            <string>Openstack</string>
+            <key>File</key>
+            <string>acknowledgments12</string>
+        </dict>
+        <dict>
+            <key>Type</key>
+            <string>PSChildPaneSpecifier</string>
+            <key>Title</key>
+            <string>Mersenne Twister</string>
+            <key>File</key>
+            <string>acknowledgments13</string>
+        </dict>
+	</array>
+</dict>
+</plist>

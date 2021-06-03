@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>StringsTable</key>
+	<string>Root</string>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>
+Willow Garage&apos;s OpenCV, BSD license:
+
+Actual license text not provided -- [the OpenCV website](http://opencv.willowgarage.com/wiki/) says &quot;OpenCV is released under a BSD license, it is free for both academic and commercial use.&quot;, with links to http://opensource.org/licenses/bsd-license.php and http://en.wikipedia.org/wiki/BSD_licenses
+</string>
+		</dict>
+	</array>
+</dict>
+</plist>
