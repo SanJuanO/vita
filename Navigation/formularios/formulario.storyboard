@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -75,16 +75,16 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foa-42-wYf" customClass="botonSuperior">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="foa-42-wYf" customClass="botonVerde">
                                         <rect key="frame" x="30" y="104" width="260" height="27"/>
-                                        <color key="backgroundColor" red="0.75294117650000003" green="0.14901960780000001" blue="0.17254901959999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.81867441500000004" green="0.0" blue="0.0076642297429999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="DuK-0K-tkz"/>
                                             <constraint firstAttribute="width" constant="260" id="rji-On-28D"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="16"/>
                                         <state key="normal" title="Entrar">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <state key="highlighted">
@@ -135,7 +135,7 @@
                                     <action selector="recuperarContrasena:" destination="iK3-Gf-kDb" eventType="touchUpInside" id="Hki-ct-x9V"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8v-w8-JHo">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8v-w8-JHo">
                                 <rect key="frame" x="50" y="484" width="220" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="L2K-IE-PD5"/>
@@ -248,7 +248,7 @@
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="formCelda" id="xXO-y5-VCh" customClass="formCelda">
-                                        <rect key="frame" x="0.0" y="55.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="49.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xXO-y5-VCh" id="dOh-ZN-LaM">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -297,7 +297,7 @@
                                                     </connections>
                                                 </switch>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="VLi-fi-3ik" customClass="formUITextField">
-                                                    <rect key="frame" x="105" y="10" width="238" height="24.5"/>
+                                                    <rect key="frame" x="105" y="10" width="237" height="24.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
@@ -353,12 +353,12 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
-                                                    <exclude reference="1V1-lr-dxv"/>
-                                                    <exclude reference="1hD-lw-PZo"/>
-                                                    <exclude reference="XR8-x4-QWd"/>
                                                     <exclude reference="QpF-U1-lf5"/>
                                                     <exclude reference="n7H-d8-rR8"/>
                                                     <exclude reference="y6l-jT-RwN"/>
+                                                    <exclude reference="1V1-lr-dxv"/>
+                                                    <exclude reference="1hD-lw-PZo"/>
+                                                    <exclude reference="XR8-x4-QWd"/>
                                                     <exclude reference="Apz-ho-DCr"/>
                                                     <exclude reference="MZo-av-lEh"/>
                                                     <exclude reference="awn-KU-2nX"/>
@@ -472,14 +472,14 @@
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="formCeldaIT" rowHeight="36" id="Rwt-2x-aay" customClass="cellFormMemo">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="36"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="320" height="36"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rwt-2x-aay" id="awZ-dH-1UI">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="I10-PG-a6e">
-                                                    <rect key="frame" x="15" y="10" width="342" height="15.5"/>
+                                                    <rect key="frame" x="16" y="10" width="340" height="15.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="aan-gp-KSI"/>
                                                         <constraint firstAttribute="width" constant="301" id="pqe-9C-MXK"/>
@@ -501,7 +501,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="formCeldaImagen" rowHeight="90" id="aMO-ps-uMC" customClass="cellFormMemo">
-                                        <rect key="frame" x="0.0" y="64" width="320" height="90"/>
+                                        <rect key="frame" x="0.0" y="60.5" width="320" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aMO-ps-uMC" id="tkt-nV-Kwc">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
@@ -862,7 +862,7 @@
                                             <action selector="siguiente:" destination="5tV-a9-jJe" eventType="touchUpInside" id="Krb-E4-E7R"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mq1-8x-OwE" customClass="botonSuperior">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mq1-8x-OwE" customClass="botonSuperior">
                                         <rect key="frame" x="6" y="6" width="76" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="76" id="GsE-8m-t4m"/>
@@ -884,7 +884,7 @@
                                             <constraint firstAttribute="width" constant="20" id="umm-YQ-fvs"/>
                                         </constraints>
                                     </activityIndicatorView>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjU-Uc-Zzb" customClass="botonSuperior">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GjU-Uc-Zzb" customClass="botonSuperior">
                                         <rect key="frame" x="516" y="6" width="76" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="76" id="gNU-gX-8M3"/>

@@ -71,17 +71,7 @@
 #import "globales.h"
 - (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
-    if (self) {
-        _payPalConfiguration = [[PayPalConfiguration alloc] init];
-        
-        _payPalConfiguration.acceptCreditCards = NO;
-        // See PayPalConfiguration.h for details and default values.
-        // Should you wish to change any of the values, you can do so here.
-        // For example, if you wish to accept PayPal but not payment card payments, then add:
-        // Or if you wish to have the user choose a Shipping Address from those already
-        // associated with the user's PayPal account, then add:
-        //_payPalConfiguration.payPalShippingAddressOption = PayPalShippingAddressOptionPayPal;
-    }
+ 
     return self;
 }
 
@@ -127,14 +117,6 @@
             
             [self analytics:self.ventanaActual conAccion:@"registroPaso1" conLabel:self.idreal];
             // Create a PayPalPayment
-            PayPalPayment *payment = [[PayPalPayment alloc] init];
-            // Amount, currency, and description
-            payment.amount = [[NSDecimalNumber alloc] initWithUnsignedLong:costoT*(acompananTempo+1)];
-            payment.currencyCode = @"MXN";
-            if(acompananTempo+1>1)
-                payment.shortDescription = [NSString stringWithFormat:@"%d lugares para: %@",acompananTempo+1,nombreconcTempo];
-            else
-                payment.shortDescription = [NSString stringWithFormat:@"%d lugar para: %@",acompananTempo+1,nombreconcTempo];
             // Use the intent property to indicate that this is a "sale" payment,
             // meaning combined Authorization + Capture.
             // To perform Authorization only, and defer Capture to your server,
@@ -142,29 +124,7 @@
             // To place an Order, and defer both Authorization and Capture to
             // your server, use PayPalPaymentIntentOrder.
             // (PayPalPaymentIntentOrder is valid only for PayPal payments, not credit card payments.)
-            payment.intent = PayPalPaymentIntentSale;
-            NSMutableArray *items=[[NSMutableArray alloc] init];
-            NSDecimalNumber *dn = [NSDecimalNumber decimalNumberWithDecimal:[[NSNumber numberWithFloat:costoT*(acompananTempo+1)] decimalValue]];
-            NSString *textoC = [NSString stringWithFormat:@"%d lugar: %@",acompananTempo+1,nombreconcTempo];
-            if(acompananTempo+1==1) textoC = [NSString stringWithFormat:@"%d lugares: %@",acompananTempo+1,nombreconcTempo];
-            PayPalItem *tempo=[PayPalItem itemWithName:textoC withQuantity:1 withPrice:dn withCurrency:@"MXN" withSku:[NSString stringWithFormat:@"SKU-%@-FORMACION-%@-%@",idconcTempo,uid,[tokenName stringByReplacingOccurrencesOfString:@" " withString:@"_"]]];
-            [items addObject:tempo];
-            payment.items=items;
-            
-            // Check whether payment is processable.
-            if (!payment.processable) {
-                // If, for example, the amount was negative or the shortDescription was empty, then
-                // this payment would not be processable. You would want to handle that here.
-            }
-            else
-            {
-                PayPalPaymentViewController *paymentViewController;
-                paymentViewController = [[PayPalPaymentViewController alloc] initWithPayment:payment
-                                                                               configuration:self.payPalConfiguration
-                                                                                    delegate:self];
-                // Present the PayPalPaymentViewController.
-                [self presentViewController:paymentViewController animated:YES completion:nil];
-            }
+         
         }
         else{
             [SVProgressHUD showErrorWithStatus:mensajeError];
@@ -190,99 +150,20 @@
             else{
                 
                 
-            
-               UIAlertController * view=   [UIAlertController
-                                             alertControllerWithTitle:@"Pagos PayPal"
-                                             message:message
-                                             preferredStyle:UIAlertControllerStyleActionSheet];
-                
-                NSString *tel1=telefono;
-                if(![tel1 isEqualToString:@""])
-                {
-                    UIAlertAction* tel1Alert = [UIAlertAction
-                                                actionWithTitle:[NSString stringWithFormat:@"Llamar %@",tel1]
-                                                style:UIAlertActionStyleDefault
-                                                handler:^(UIAlertAction * action)
-                                                {
-                                                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[@"tel://" stringByAppendingString:tel1]]];
-                                                }];
-                    [view addAction:tel1Alert];
+         
                 }
                
-                    UIAlertAction* tel2Alert = [UIAlertAction
-                                                actionWithTitle:@"Enviar correo"
-                                                style:UIAlertActionStyleDefault
-                                                handler:^(UIAlertAction * action)
-                                                {
-                                                    
-                                                    NSString *recipients = @"mailto:pagos@vitamexico.org?subject=Pagos pendientes PayPal";
-                                                    
-                                                    NSString *body = [NSString stringWithFormat:@"&body=Se registró un pago pendiente con PayPal idTransaction:%@ a nombre de %@ UsuarioID:%@",idtransaction,tokenName,uid];
-                                                    
-                                                    NSString *email = [NSString stringWithFormat:@"%@%@", recipients, body];
-                                                    
-                                                    email = [email stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-                                                    
-                                                    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
-                                                }];
-                    [view addAction:tel2Alert];
-                
-                
-                UIAlertAction* cancel = [UIAlertAction
-                                         actionWithTitle:@"Cancelar"
-                                         style:UIAlertActionStyleDefault
-                                         handler:^(UIAlertAction * action)
-                                         {
-                                             [view dismissViewControllerAnimated:YES completion:nil];
-                                             
-                                         }];
-                
-                [view addAction:cancel];
-                [self presentViewController:view animated:YES completion:nil];
-                
-                [self recargaContenido];
+         
                 
             }
         
         }
         else if([self.ventanaActual isEqualToString:@"forDetalle"])
         {
-            if([statusTempo isEqualToString:@"ok"]){
-                if(acompananTempo+1>1){
-                self.vistaAccionTexto.text=@"Asistencia confirmada (¿Cambiar?)";
-                [diccionarioAccion removeObjectForKey:@"operacion"];
-                [diccionarioAccion setObject:@"editarAsistentesExterno" forKey:@"operacion"];
-                    
-                    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Storyboard" bundle:nil];
-                    acompanantesViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"acompanantes"];
-                    vc.idreal = self.idreal;
-                    [self analytics:self.ventanaActual conAccion:@"editarAsistencia" conLabel:self.idreal];
-                    [self.navigationController pushViewController:vc animated:true];
-                    
-                //[self cargaAccionAccion:nil];
-                    //[diccionarioAccion removeObjectForKey:@"operacion"];
-                    //[diccionarioAccion setObject:@"editarAsistentesExterno" forKey:@"operacion"];
-
-                }
-                else [self recargaContenido];
-                //[APIConnection connectAPI:[NSString stringWithFormat:@"actDetalle.php?idreal=%@&modo2=%@",self.idreal,self.ventanaActual2] withData:@"" withMethod:@"GET" withContentType:@"" withShowAlert:NO onErrorReturn:false withSender:self.ventanaActual willContinueLoading:false];
-            }
-            else{
-                UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:@"Pagos PayPal"
-                                                                 message:message
-                                                                delegate:self
-                                                       cancelButtonTitle:@"Ok"
-                                                       otherButtonTitles: nil];
-                [alert show];
-
-                NSString *archivo=self.ventanaActual;
-                if([archivo isEqualToString:@"forDetalle"])
-                    archivo=@"actDetalle";
-                [APIConnection connectAPI:[NSString stringWithFormat:@"%@.php?idreal=%@&modo2=%@",archivo,self.idreal,self.ventanaActual2] withData:@"" withMethod:@"GET" withContentType:@"" withShowAlert:true onErrorReturn:false withSender:self.ventanaActual willContinueLoading:false];
-                idconcFinal=0;
-            }
+            
+           
         }
-    }
+    
     else if([senderValue isEqualToString:@"registroDirecto"]){
         
         NSDictionary *response=[APIConnection getDictionaryJSON:json withKey:@"response"];
@@ -1292,61 +1173,7 @@
         [self presentViewController:view animated:YES completion:nil];
         
     }
-    else if([operacion isEqualToString:@"pagar"])
-    {
-        // Create a PayPalPayment
-        PayPalPayment *payment = [[PayPalPayment alloc] init];
-        pagarTotal=121;
-        // Amount, currency, and description
-        payment.amount = [[NSDecimalNumber alloc] initWithUnsignedLong:pagarTotal];
-        payment.currencyCode = @"MXN";
-        payment.shortDescription = @"Pago VITA";
-        
-        // Use the intent property to indicate that this is a "sale" payment,
-        // meaning combined Authorization + Capture.
-        // To perform Authorization only, and defer Capture to your server,
-        // use PayPalPaymentIntentAuthorize.
-        // To place an Order, and defer both Authorization and Capture to
-        // your server, use PayPalPaymentIntentOrder.
-        // (PayPalPaymentIntentOrder is valid only for PayPal payments, not credit card payments.)
-        payment.intent = PayPalPaymentIntentSale;
-        
-        NSMutableArray *items=[[NSMutableArray alloc] init];
-        
-        
-        for(int i=0; i<=[pagarArreglo count]-1; i++)
-        {
-            NSDictionary*elemento=[pagarArreglo objectAtIndex:i];
-            NSDecimalNumber *x=[[NSDecimalNumber alloc] initWithString:[APIConnection getStringJSON:elemento withKey:@"totalconc" widthDefValue:@"0"]];
-            
-            NSString *complementoSKU=@"PAGOS";
-            int actTempo = [APIConnection getIntJSON:elemento withKey:@"iactconc" widthDefValue:@""];
-            if(actTempo>0) complementoSKU = @"FORMACION";
-            PayPalItem *tempo=[PayPalItem itemWithName:[APIConnection getStringJSON:elemento withKey:@"concepto" widthDefValue:@"0"] withQuantity:1 withPrice:x withCurrency:@"MXN" withSku:[NSString stringWithFormat:@"SKU-%@-%@-%@-%@",[APIConnection getStringJSON:elemento withKey:@"idreal" widthDefValue:@"0"],complementoSKU,uid,[tokenName stringByReplacingOccurrencesOfString:@" " withString:@"_"]]];
-            [items addObject:tempo];
-        }
-        
-        
-        payment.items=items;
-        
-        // Check whether payment is processable.
-        if (!payment.processable) {
-            // If, for example, the amount was negative or the shortDescription was empty, then
-            // this payment would not be processable. You would want to handle that here.
-        }
-        
-        else
-        {
-            PayPalPaymentViewController *paymentViewController;
-            paymentViewController = [[PayPalPaymentViewController alloc] initWithPayment:payment
-                                                                           configuration:self.payPalConfiguration
-                                                                                delegate:self];
-            
-            // Present the PayPalPaymentViewController.
-            [self presentViewController:paymentViewController animated:YES completion:nil];
-        }
-
-    }
+   
     else if([operacion isEqualToString:@"registro"])
     {
         int acompanantes=[APIConnection getIntJSON:diccionarioAccion withKey:@"puedoreservar" widthDefValue:@""]-1;
@@ -1457,51 +1284,6 @@
         [APIConnection connectAPI:[NSString stringWithFormat:@"actDispobilidad.php?idreal=%@",self.idreal] withData:@"" withMethod:@"GET" withContentType:@"" withShowAlert:true onErrorReturn:false withSender:@"actDispobilidad" willContinueLoading:true];
     }
 }
-- (void)payPalPaymentViewController:(PayPalPaymentViewController *)paymentViewController
-                 didCompletePayment:(PayPalPayment *)completedPayment {
-    // Payment was processed successfully; send to server for verification and fulfillment.
-    [self verifyCompletedPayment:completedPayment];
-    pagarTotal=0;
-    [pagarArreglo removeAllObjects];
-    
-    // Dismiss the PayPalPaymentViewController.
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)payPalPaymentDidCancel:(PayPalPaymentViewController *)paymentViewController {
-    if(idconcFinal!=0)
-        [APIConnection connectAPI:[NSString stringWithFormat:@"actDetalle.php?iconc=%@&modo=registroPaso1Cancelar",idconcFinal] withData:@"" withMethod:@"GET" withContentType:@"" withShowAlert:YES onErrorReturn:false withSender:@"registroPaso1Cancelar" willContinueLoading:NO];
-    idconcFinal=0;
-    // The payment was canceled; dismiss the PayPalPaymentViewController.
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-- (void)verifyCompletedPayment:(PayPalPayment *)completedPayment {
-    
-    // Send the entire confirmation dictionary
-    NSData *confirmation = [NSJSONSerialization dataWithJSONObject:completedPayment.confirmation
-                                                           options:0
-                                                             error:nil];
-    NSError* error;
-    NSDictionary* infoPago = [NSJSONSerialization JSONObjectWithData:confirmation
-                                                         options:kNilOptions
-                                                           error:&error];
-    NSDictionary *infoFinalPago = [APIConnection getDictionaryJSON:infoPago withKey:@"response"];
-    NSLog(@"infoFinalPago %@",infoFinalPago);
-    NSString *idPago = [APIConnection getStringJSON:infoFinalPago withKey:@"id" widthDefValue:@""];
-    NSString *state = [APIConnection getStringJSON:infoFinalPago withKey:@"state" widthDefValue:@""];
-    
-    if([state isEqualToString:@"approved"]){
-        [APIConnection connectAPI:[NSString stringWithFormat:@"validaPP.php?PAY=%@",idPago] withData:@"" withMethod:@"GET" withContentType:@"" withShowAlert:YES onErrorReturn:false withSender:@"validaPP" willContinueLoading:true];
-        
-    }
-    else{
-        NSLog(@"Ocurrió un error");
-    }
-    // Send confirmation to your server; your server should verify the proof of payment
-    // and give the user their goods or services. If the server is not reachable, save
-    // the confirmation and try again later.
-}
 
 -(void)viewDidAppear:(BOOL)animated
 {
@@ -1538,7 +1320,6 @@
     // Start out working with the test environment! When you are ready, switch to PayPalEnvironmentProduction.
     //[PayPalMobile preconnectWithEnvironment:PayPalEnvironmentNoNetwork];
     //[PayPalMobile preconnectWithEnvironment:PayPalEnvironmentSandbox];
-    [PayPalMobile preconnectWithEnvironment:PayPalEnvironmentProduction];
     
    
       

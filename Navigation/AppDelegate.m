@@ -11,7 +11,6 @@
 // PARA INSTALAR FACEBOOK CONSULTAR https://developers.facebook.com/docs/ios/getting-started
 #import "noticiaDetalleViewController.h"
 #import "HDNotificationView.h"
-#import "PayPalMobile.h"
 
 #define IPAD UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
 #import <sqlite3.h>
@@ -312,9 +311,7 @@ BOOL cambioFuenteAhora=false;
         configPrincipal=[NSMutableDictionary dictionaryWithDictionary:configPrincipal2];
     colorFuenteGlobal=fuenteColor;
     
-    [PayPalMobile initializeWithClientIdsForEnvironments:@{PayPalEnvironmentProduction : @"AV4aD2Pw6Xs140EyDO11gNAoWByR7lejSJisatcxunkVAstVoAYAyE-Nauv79upzZCypxf8_ys5Ubcbk",
-                                                           PayPalEnvironmentSandbox : @"AUhbLNATIvCyD31NhFLmkrN4AiXJooPIYmZjmgeXSNuo_mqMQxoQJJfbijn2grxrg1SLcVdyKznEzw5a"}];
-    
+   
     
     return YES;
 

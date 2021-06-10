@@ -9,9 +9,8 @@
 #import "baseVentanaViewController.h"
 #import <UIKit/UIKit.h>
 #import "timeline.h"
-#import "PayPalMobile.h"
 
-@interface actividadesViewController : baseVentanaViewController<timelineProtocol,PayPalPaymentDelegate,UIActionSheetDelegate,NSXMLParserDelegate>
+@interface actividadesViewController : baseVentanaViewController<timelineProtocol,UIActionSheetDelegate,NSXMLParserDelegate>
 {
     BOOL primeraVez,cargarInfinite;
     long posicionTimeline;
@@ -65,7 +64,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *bpagadosT;
 @property (weak, nonatomic) IBOutlet UIImageView *bcanceladosT;
 
-@property (nonatomic, strong, readwrite) PayPalConfiguration *payPalConfiguration;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *posicionVistaBotonesConceptos;
 @property (weak, nonatomic) IBOutlet UIButton *botonAnteriorEncuentro;
 @property (weak, nonatomic) IBOutlet UIButton *botonSiguienteEncuentro;

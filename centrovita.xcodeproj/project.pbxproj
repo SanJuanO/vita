@@ -123,7 +123,6 @@
 		B379BF2D1B62FA64008B3924 /* timelineCeldaNoticia.m in Sources */ = {isa = PBXBuildFile; fileRef = B379BF2C1B62FA64008B3924 /* timelineCeldaNoticia.m */; };
 		B38246AD1B7BBD7200BA884F /* timelineGeneralFoto.xib in Resources */ = {isa = PBXBuildFile; fileRef = B38246AC1B7BBD7200BA884F /* timelineGeneralFoto.xib */; };
 		B38246B01B7BBD8200BA884F /* timelineGeneralFoto.m in Sources */ = {isa = PBXBuildFile; fileRef = B38246AF1B7BBD8200BA884F /* timelineGeneralFoto.m */; };
-		B391B7971C447E040096A0A4 /* libPayPalMobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B391B78F1C447E040096A0A4 /* libPayPalMobile.a */; };
 		B391B7991C447E5A0096A0A4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B391B7981C447E5A0096A0A4 /* Accelerate.framework */; };
 		B391B79B1C447E710096A0A4 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B391B79A1C447E710096A0A4 /* CoreMedia.framework */; };
 		B391B79D1C447E8B0096A0A4 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B391B79C1C447E8B0096A0A4 /* SafariServices.framework */; };
@@ -596,7 +595,6 @@
 				B3E145751B09E2DC00F54E17 /* libsqlite3.dylib in Frameworks */,
 				04CD2D4416AB5722003963A9 /* UIKit.framework in Frameworks */,
 				B39A0E231B1043A500A04E8F /* libGoogleAnalyticsServices.a in Frameworks */,
-				B391B7971C447E040096A0A4 /* libPayPalMobile.a in Frameworks */,
 				04CD2D4616AB5722003963A9 /* Foundation.framework in Frameworks */,
 				DDAB736CED229DECB6FF37E4 /* Pods_centrovita.framework in Frameworks */,
 			);
@@ -1581,13 +1579,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1.3;
 				DEVELOPMENT_TEAM = DP428H92D5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/PayPalMobile",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Navigation/centrovita-Prefix.pch";
@@ -1612,10 +1609,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Navigation",
-					"$(PROJECT_DIR)/PayPalMobile",
 					"$(PROJECT_DIR)",
 				);
-				MARKETING_VERSION = 3.2;
+				MARKETING_VERSION = 3.5;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"-ObjC",
@@ -1640,13 +1636,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.2;
+				CURRENT_PROJECT_VERSION = 1.3;
 				DEVELOPMENT_TEAM = DP428H92D5;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/PayPalMobile",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Navigation/centrovita-Prefix.pch";
@@ -1671,10 +1666,9 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Navigation",
-					"$(PROJECT_DIR)/PayPalMobile",
 					"$(PROJECT_DIR)",
 				);
-				MARKETING_VERSION = 3.2;
+				MARKETING_VERSION = 3.5;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"-ObjC",
