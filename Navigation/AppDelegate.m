@@ -215,12 +215,12 @@ BOOL cambioFuenteAhora=false;
     
     APIConnection=[[iwantooAPIConnection alloc] init];
     APIConnection.delegationListener=self;
-    [APIConnection limpiaSesion];
+    /*[APIConnection limpiaSesion];
     if([token isEqualToString:@""])
     {
         [self abreFirma];
     }
-    
+    */
     NSDictionary *userInfo = [launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey];
     if (userInfo) {
         // como viene de afuera vamos directo a la operación

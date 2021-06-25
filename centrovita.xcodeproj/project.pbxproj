@@ -1611,7 +1611,7 @@
 					"$(PROJECT_DIR)/Navigation",
 					"$(PROJECT_DIR)",
 				);
-				MARKETING_VERSION = 3.5;
+				MARKETING_VERSION = 3.6;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"-ObjC",
@@ -1668,7 +1668,7 @@
 					"$(PROJECT_DIR)/Navigation",
 					"$(PROJECT_DIR)",
 				);
-				MARKETING_VERSION = 3.5;
+				MARKETING_VERSION = 3.6;
 				OTHER_LDFLAGS = (
 					"-lc++",
 					"-ObjC",
